@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 800px;
+            margin: 20px auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+        }
+        .details-left {
+            width: 50%;
+        }
+        .details-right {
+            width: 50%;
+            text-align: right;
+        }
+        .products {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .buyer-details {
+            margin-top: 20px;
+        }
+        .centered {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container shadow p-3 mb-5 bg-body rounded">
+        <div class="header">
+            <h1>Company Name</h1>
+            <p>Company Address</p>
+            <p>GST No: GST123456789</p>
+        </div>
+        <div class="details">
+            <div class="details-left">
+                <p>Date: {{ total_invoice.total_date }}</p>
+                <p>Bank Details:</p>
+                <p>Bank Name: XYZ Bank</p>
+                <p>Account No: 1234567890</p>
+                <p>IFSC Code: ABCD1234</p>
+            </div>
+            <div class="buyer-details">
+                <p>Bill No: {{ total_invoice.total_ordernumber }}</p>
+                <p>Buyer Name: {{ total_invoice.total_buyer }}</p>
+                <p>Phone Number: {{ total_invoice.total_buyermobile }}</p>
+            </div>
+        </div>
+        <div class="products">
+            <h2>Product Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sl.No</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>GST</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in order_invoice %}
+                    <tr>
+                        <td>{{ c.order_itemnumber }}</td>
+                        <td>{{ c.order_productname}}</td>
+                        <td>Rs.{{ c.order_price | float| round(2) }}</td>
+                        <td>{{ c.order_quantity }}</td>
+                        <td>{{ c.order_gst |float| round(2) }} %</td>
+                        <td>Rs.{{ c.order_total | float|round(2) }}</td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="5" style="text-align: right;">Bill Total:</td>
+                        <td>Rs.{{ total_invoice.total_orderamount | float | round(2) }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="details-center">
+            <p>Rupees:{{ amou }} only</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="details-center">
+        <p class="centered">Thank you and visit us again!</p>
+    <div class="details-center">
+</body>
+</html>

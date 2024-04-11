@@ -1,0 +1,64 @@
+
+
+
+
+
+
+<div v-for="(product, indexp) in products" :key="index" class="row mb-3">
+    <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Product Name" v-model="product.productname" @input="filterProductNames(product)">
+        <div v-if="filteredProductNames.length > 0" class="autocomplete-items">
+          <div v-for="(filteredProduct, index) in filteredProductNames" :key="index" @click="selectProduct(filteredProduct,indexp)">{{ filteredProduct }}</div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <input type="number" class="form-control" placeholder="Quantity" v-model="product.quantity" @input="updateTotal(product)">
+    </div>
+    <div class="col-md-2">
+        <input type="number" class="form-control" placeholder="Price" v-model="product.price" @input="updateTotal(product)">
+    </div>
+    <div class="col-md-2">
+      <input type="number" class="form-control" placeholder="GST" v-model="product.GST" @input="updateTotal(product)">
+    </div>
+    <div class="col-md-2">
+    <input type="text" class="form-control" placeholder="Total" :value="getTotal(product)" readonly>
+    </div>
+    <div class="col-md-1">
+    <button v-on:click="del(product.productname)" class="input-group-append btn btn-danger" style="margin-right:20px" >
+    <i class="bi bi-trash"></i>
+    </button>              
+    </div>
+</div>                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

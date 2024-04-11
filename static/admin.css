@@ -1,0 +1,115 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+  
+header {
+    background-color: #cde7fc;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.column-header {
+    font-weight: bold;
+}
+
+  header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold; /* Add this line */
+}
+
+
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+   .card {
+            height: 200px; /* Set a fixed height */
+            margin-bottom: 20px;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .request-card{
+            height: 400px;
+
+        }
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+}
+
+.custom-border {
+    border: 2px solid #575469; /* You can adjust the border width and color as needed */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    padding: 20px; /* Optional: adds some padding inside the border */
+    box-shadow: #0056b3;
+}

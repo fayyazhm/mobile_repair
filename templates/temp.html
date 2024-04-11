@@ -1,0 +1,63 @@
+<body style="height: 100vh;">
+    <header class="header-container">
+    <div class="header">
+        <h2>Admin Homepage</h2>
+        <div class="profile-buttons">
+            <span class="mr-3">Today's Date: <strong><span id="date"></span></strong></span>
+            <a href="/admin/profile" class="btn btn-primary">Profile</a>
+            <a href="/admin/logout" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+    </header>
+    <div class="container" style="align-items: center;">
+    <div style="height: 20px;"></div>        
+    <!-- Cards Section -->
+    <div class="row">
+        <!-- Card for Adding Products -->
+        <div class="col-md-4">
+            <div class="card rounded-lg shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Add Products</h5>
+                    <p class="card-text">Click below to add new products.</p>
+                    <a href="/admin/add-product" class="btn btn-primary">Add Products</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for Viewing Requests -->
+        <div class="col-md-4">
+            <div class="card rounded-lg shadow">
+                <div class="card-body">
+                    <h5 class="card-title">View Requests</h5>
+                    <p class="card-text">Click below to view requests.</p>
+                    <a href="/admin/view-requests" class="btn btn-primary">View Requests</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for Billing -->
+        <div class="col-md-4">
+            <div class="card rounded-lg shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Billing</h5>
+                    <p class="card-text">Click below to view billing details.</p>
+                    <a href="/admin/billing" class="btn btn-primary">Billing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    // Get current date and display it
+    var currentDate = new Date();
+    var dateString = currentDate.toDateString();
+    document.getElementById("date").innerHTML = dateString;
+</script>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 Mobile Repair Shop</p>
+    </div>
+</footer>  
+
+</body>
+</html>

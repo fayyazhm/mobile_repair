@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Repair Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/static/style.css" rel="stylesheet">
+</head>
+<body style="min-height: 100vh;">
+    <header>
+        <div class="container">
+            <h1>Mobile Repair Shop</h1>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#contact">Admin Login</a>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="services">
+      <div class="container">
+          <h2 style="text-align: center;" >Our Services</h2>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-md-4 d-flex justify-content-center">
+              <div class="service text-center">
+                      <h3>Screen Replacement</h3>
+                      <p>We offer professional screen replacement services for all major smartphone brands.</p>
+                      <a href="#" class="btn btn-primary">Select</a>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="service text-center">
+                      <h3>Battery Replacement</h3>
+                      <p>Get your phone's battery replaced by our experienced technicians.</p>
+                      <a href="#" class="btn btn-primary">Select</a>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="service text-center">
+                      <h3>Other Services</h3>
+                      <p>We provide various other repair services such as camera repair, speaker replacement, etc.</p>
+                      <a href="#" class="btn btn-primary">Select</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section id="purchase-new">
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="col-md-6">
+            <div class="purchase-new text-center">
+                <h2>Purchase New Phones</h2>
+                <p>Looking to buy a new phone? Check out our latest selection of smartphones.</p>
+                <a href="#" class="btn btn-primary">Browse Phones</a>
+            </div>
+        </div>
+    </div>
+</section>
+  <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For inquiries or appointments, please fill out the form below or give us a call.</p>
+            <form action="contact.php" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mobile Repair Shop</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
